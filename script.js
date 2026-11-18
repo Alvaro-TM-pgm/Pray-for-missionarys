@@ -4,7 +4,7 @@
   Os caminhos são relativos à raiz do site.
 */
 const missionaries = [
-  { name: "Missionário 01", description: "Um pedido especial de oração", cover: "assets/covers/capa-01.svg", video: "videos/missionario-01.mp4" },
+  { name: "Endrik", description: "Um pedido especial de oração", cover: "assets/covers/capa-01.svg", video: "Endrik.mp4" },
   { name: "Missionário 02", description: "Um pedido especial de oração", cover: "assets/covers/capa-02.svg", video: "videos/missionario-02.mp4" },
   { name: "Missionário 03", description: "Um pedido especial de oração", cover: "assets/covers/capa-03.svg", video: "videos/missionario-03.mp4" },
   { name: "Missionário 04", description: "Um pedido especial de oração", cover: "assets/covers/capa-04.svg", video: "videos/missionario-04.mp4" },

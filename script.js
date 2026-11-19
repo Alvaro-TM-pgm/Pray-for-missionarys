@@ -24,6 +24,14 @@ const videoName = document.querySelector("#video-missionary-name");
 const playerCounter = document.querySelector("#player-counter");
 const videoError = document.querySelector("#video-error");
 let currentIndex = -1;
+let prayerReturnTimer = null;
+
+function clearPrayerReturnTimer() {
+  if (prayerReturnTimer !== null) {
+    window.clearTimeout(prayerReturnTimer);
+    prayerReturnTimer = null;
+  }
+}
 
 function playIcon() {
   return '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.7c0-.7.8-1.1 1.4-.7l8 5.1a1 1 0 0 1 0 1.7l-8 5.1c-.6.4-1.4 0-1.4-.7V2.7Z" fill="currentColor"/></svg>';
@@ -59,6 +67,7 @@ function escapeHTML(value) {
 async function openVideo(index) {
   const person = missionaries[index];
   if (!person) return;
+  clearPrayerReturnTimer();
   currentIndex = index;
   video.pause();
   video.removeAttribute("src");
@@ -92,6 +101,7 @@ async function openVideo(index) {
 }
 
 async function closePlayer(showPrayer = false) {
+  clearPrayerReturnTimer();
   video.pause();
   video.removeAttribute("src");
   video.load();
@@ -106,6 +116,10 @@ async function closePlayer(showPrayer = false) {
     prayerScreen.classList.add("active");
     prayerScreen.setAttribute("aria-hidden", "false");
     document.body.classList.add("mode-prayer");
+    prayerReturnTimer = window.setTimeout(() => {
+      prayerReturnTimer = null;
+      closePlayer(false);
+    }, 30000);
   } else {
     prayerScreen.classList.remove("active");
     prayerScreen.setAttribute("aria-hidden", "true");

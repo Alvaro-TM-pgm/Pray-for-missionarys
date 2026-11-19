@@ -10,7 +10,9 @@ const missionaries = [
   { name: "Beatriz", cover: "assets/covers/beatriz.jpg", video: "beatirz.mp4" },
   { name: "Ellen Gregorio", cover: "assets/covers/ellen-gregorio.jpg", video: "ellen_gregorio_honduras.mp4" },
   { name: "Franciele Medeiros", cover: "assets/covers/franciele-medeiros.jpg", video: "franciele_medeiros.mp4" },
-  { name: "Iago Alonso", cover: "assets/covers/iago-alonso.jpg", video: "iago_alonso.mp4" }
+  { name: "Iago Alonso", cover: "assets/covers/iago-alonso.jpg", video: "iago_alonso.mp4" },
+  { name: "Carol", cover: "assets/covers/carol.jpg", video: "carol_2.mp4" },
+  { name: "Brenda", cover: "assets/covers/brenda.jpg", video: "Brenda .MP4" }
 ];
 
 const grid = document.querySelector("#missionary-grid");

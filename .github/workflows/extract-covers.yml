@@ -27,6 +27,8 @@ jobs:
           ffmpeg -hide_banner -loglevel error -ss 4 -i "ellen_gregorio_honduras.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/ellen-gregorio.jpg
           ffmpeg -hide_banner -loglevel error -ss 4 -i "franciele_medeiros.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/franciele-medeiros.jpg
           ffmpeg -hide_banner -loglevel error -ss 4 -i "iago_alonso.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/iago-alonso.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "carol_2.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/carol.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "Brenda .MP4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/brenda.jpg
       - name: Save cover images to the repository
         run: |
           git config user.name "github-actions[bot]"

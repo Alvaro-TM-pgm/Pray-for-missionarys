@@ -157,10 +157,8 @@ body.mode-player, body.mode-prayer { overflow: hidden; }
 .missionary-grid { gap: 20px; }
 .mission-card { border-radius: 5px; }
 .card-image img { position: absolute; inset: 0; }
-.card-thumbnail { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .25s, transform .55s; }
-.card-image.has-video-cover .card-thumbnail { opacity: 1; }
-.card-overlay { z-index: 2; }
-.play-button { z-index: 3; }
+.card-overlay { z-index: 1; }
+.play-button { z-index: 2; }
 .card-info { min-height: 63px; padding: 14px 16px; }
 .card-info h3 { margin: 0; font-size: 18px; }
 .card-arrow { display: none; }

@@ -1,3 +1,3 @@
 # Capas dos missionários
 
-As capas SVG são espaços reservados. Para inserir uma foto, copie uma imagem JPG, PNG ou WebP para esta pasta e atualize o caminho `cover` da pessoa correspondente no arquivo `script.js`. Exemplo: `assets/covers/endrik.jpg`. Prefira imagens horizontais para preencher melhor o espaço da capa.
+As imagens JPG desta pasta são quadros extraídos dos vídeos e são usadas diretamente como capas no catálogo. Para trocar uma delas, substitua o arquivo e mantenha o caminho indicado em `script.js`.

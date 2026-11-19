@@ -4,13 +4,13 @@ Catálogo de vídeos missionários com reprodução em tela dedicada e convite �
 
 ## Capas e vídeos
 
-As capas mostram automaticamente um quadro dos próprios vídeos. Para substituir uma capa por uma foto específica, coloque a imagem em `assets/covers/` e atualize o caminho `cover` da pessoa no início de `script.js`. Por exemplo:
+Cada capa JPG é uma imagem fixa extraída do vídeo correspondente. Para escolher outra imagem, coloque um JPG, PNG ou WebP em `assets/covers/` e atualize o caminho `cover` da pessoa no início de `script.js`. Por exemplo:
 
 ```js
 cover: "assets/covers/endrik.jpg"
 ```
 
-Use uma imagem horizontal JPG, PNG ou WebP. Os arquivos SVG são exibidos enquanto o vídeo carrega ou se o navegador não conseguir criar a capa. Para cadastrar outro missionário, adicione um objeto à lista `missionaries` com `name`, `cover` e `video`.
+Para recapturar as capas a partir dos vídeos, execute manualmente a tarefa **Create video cover images** na aba Actions do GitHub. Ela salva um quadro de cada vídeo em `assets/covers/`. Para cadastrar outro missionário, adicione um objeto à lista `missionaries` com `name`, `cover` e `video`, e inclua a extração da capa na tarefa.
 
 Os nove MP4 atuais ficam na raiz do repositório. Mantenha os nomes usados em `script.js` ou atualize o caminho `video` quando trocar um arquivo. O site não exige instalação de dependências.
 

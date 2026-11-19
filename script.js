@@ -46,7 +46,7 @@ function renderMissionaries() {
         <span class="play-button">${playIcon()}</span>
       </div>
       <div class="card-info">
-        <div><h3><span class="mission-name">${escapeHTML(person.name)}</span></h3></div>
+        <div><h3>${escapeHTML(person.name)}</h3></div>
         <span class="card-arrow" aria-hidden="true">↗</span>
       </div>
     </button>

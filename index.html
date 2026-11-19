@@ -1,57 +1,76 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    <section id="missionarios" class="mission-section">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a1b">
+  <meta name="description" content="Conheça os missionários e reserve um momento para orar por suas jornadas.">
+  <title>Vozes da Missão — Um convite à oração</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Vozes da Missão, início">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 34S5 25 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11-15 20-15 20Z" stroke="currentColor" stroke-width="1.6"/><path d="M20 14v13m-5-8 5-5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-name">VOZES <span>DA MISSÃO</span></span>
+    </a>
+    <div class="header-note"><span class="live-dot" aria-hidden="true"></span> UM CONVITE À ORAÇÃO</div>
+  </header>
+
+  <main id="lobby" class="page-shell">
+    <span id="inicio" class="anchor-top" aria-hidden="true"></span>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orbit orbit-a" aria-hidden="true"></div><div class="hero-orbit orbit-b" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> HISTÓRIAS QUE MERECEM SER OUVIDAS</p>
+        <h1 id="hero-title">Uma jornada de fé.<br><em>Uma rede de oração.</em></h1>
+        <p class="hero-description">Conheça quem está levando esperança a novos lugares. Cada história é um convite para se aproximar, ouvir e orar.</p>
+        <a class="hero-link" href="#missionarios">Conheça os missionários <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="verse-card" aria-label="Versículo bíblico">
+        <span class="verse-icon" aria-hidden="true">✳</span>
+        <span class="verse-label">UM LEMBRETE</span>
+        <blockquote>“Ide por todo o mundo.”</blockquote>
+        <span class="verse-reference">Marcos 16:15</span>
+        <div class="verse-line"></div>
+        <p class="verse-small">Sua oração pode alcançar lugares onde seus pés ainda não chegaram.</p>
+      </aside>
+    </section>
+
+    <section id="missionarios" class="mission-section" aria-labelledby="mission-heading">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow"><span></span> NOVE HISTÓRIAS, NOVE CAUSAS</p>
-          <h2>Por quem vamos orar hoje?</h2>
-        </div>
-        <p class="section-aside">Escolha um vídeo para ouvir<br>o pedido de oração.</p>
+        <div><p class="eyebrow"><span></span> HISTÓRIAS, NOMES E PEDIDOS</p><h2 id="mission-heading">Escolha um missionário para orar</h2></div>
+        <p class="section-aside">Assista ao vídeo e conheça<br>um pouco dessa jornada.</p>
       </div>
       <div id="missionary-grid" class="missionary-grid" aria-live="polite"></div>
     </section>
 
-    <section class="closing-note">
-      <span class="closing-rule"></span>
-      <p>“A oração não conhece fronteiras.”</p>
-      <span class="closing-rule"></span>
-    </section>
+    <section class="closing-note" aria-label="Mensagem"><span class="closing-rule"></span><p>“A oração não conhece fronteiras.”</p><span class="closing-rule"></span></section>
   </main>
 
-  <section id="player-screen" class="player-screen" aria-hidden="true">
+  <section id="player-screen" class="player-screen" aria-hidden="true" aria-label="Reprodutor de vídeo">
     <div class="player-topbar">
-      <button id="back-from-player" class="back-button" type="button">
-        <span aria-hidden="true">←</span> Voltar aos missionários
-      </button>
+      <button id="back-from-player" class="back-button" type="button"><span aria-hidden="true">←</span> Voltar aos missionários</button>
       <div class="player-brand">VOZES <span>DA MISSÃO</span></div>
-      <span class="player-counter" id="player-counter">01 / 09</span>
+      <span class="player-counter" id="player-counter">01 / 07</span>
     </div>
     <div class="video-stage">
-      <video id="missionary-video" playsinline controls preload="metadata">
-        Seu navegador não oferece suporte à reprodução de vídeo.
-      </video>
-      <div id="video-error" class="video-error" hidden>
-        <div class="error-symbol">!</div>
-        <h2>Não foi possível carregar este vídeo.</h2>
-        <p>Confira se o arquivo MP4 foi colocado na pasta <code>videos</code> com o nome correto.</p>
-        <button class="button button-outline" id="error-back" type="button">Voltar aos missionários</button>
-      </div>
-      <div class="video-caption">
-        <span class="caption-kicker">MOMENTO DE ORAÇÃO</span>
-        <h2 id="video-missionary-name">Missionário</h2>
-      </div>
+      <video id="missionary-video" playsinline controls preload="metadata">Seu navegador não oferece suporte à reprodução de vídeo.</video>
+      <div id="video-error" class="video-error" hidden><div class="error-symbol">!</div><h2>Não foi possível carregar este vídeo.</h2><p>Confira se o arquivo MP4 continua na pasta do site.</p><button class="button button-outline" id="error-back" type="button">Voltar aos missionários</button></div>
+      <div class="video-caption"><span class="caption-kicker">MOMENTO DE ORAÇÃO</span><h2 id="video-missionary-name">Missionário</h2></div>
     </div>
     <p class="player-hint">Assista com atenção. Ao final, reserve um momento para orar.</p>
   </section>
 
-  <section id="prayer-screen" class="prayer-screen" aria-hidden="true">
+  <section id="prayer-screen" class="prayer-screen" aria-hidden="true" aria-label="Momento de oração">
     <div class="prayer-content">
-      <div class="prayer-symbol" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none"><path d="M32 53S8 39 8 22a13 13 0 0 1 24-7 13 13 0 0 1 24 7c0 17-24 31-24 31Z" stroke="currentColor" stroke-width="1.7"/><path d="M32 19v20m-7-13 7-7 7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <p class="eyebrow centered">AGORA É SUA VEZ</p>
-      <h1>Orem pelas<br><em>causas missionárias.</em></h1>
+      <div class="prayer-symbol" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M32 53S8 39 8 22a13 13 0 0 1 24-7 13 13 0 0 1 24 7c0 17-24 31-24 31Z" stroke="currentColor" stroke-width="1.7"/><path d="M32 19v20m-7-13 7-7 7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="eyebrow centered">AGORA É SUA VEZ</p><h1>Escolha um missionário<br><em>para orar.</em></h1>
       <p class="prayer-message">Leve este pedido a Deus. Ore pelo missionário, pelas pessoas que ele deseja alcançar e por cada desafio compartilhado.</p>
       <p class="prayer-verse">“A oração de um justo é poderosa e eficaz.” <span>— Tiago 5:16</span></p>
       <button id="return-to-lobby" class="button button-gold" type="button">Voltar ao início <span aria-hidden="true">↗</span></button>
@@ -59,11 +78,7 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <span>VOZES DA MISSÃO</span>
-    <span>Um só propósito: levar esperança.</span>
-  </footer>
-
+  <footer class="site-footer"><span>VOZES DA MISSÃO</span><span>Um só propósito: levar esperança.</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

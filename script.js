@@ -1,18 +1,16 @@
 /*
   VOZES DA MISSÃO
-  Edite os dados abaixo para colocar nomes, descrições, capas e vídeos reais.
-  Os caminhos são relativos à raiz do site.
+  Para trocar uma capa, coloque sua foto na pasta assets/covers e atualize o
+  caminho cover abaixo. Os caminhos são relativos à raiz do site.
 */
 const missionaries = [
-  { name: "Endrik", description: "Um pedido especial de oração", cover: "assets/covers/capa-01.svg", video: "Endrik.mp4" },
-  { name: "Missionário 02", description: "Um pedido especial de oração", cover: "assets/covers/capa-02.svg", video: "videos/missionario-02.mp4" },
-  { name: "Missionário 03", description: "Um pedido especial de oração", cover: "assets/covers/capa-03.svg", video: "videos/missionario-03.mp4" },
-  { name: "Missionário 04", description: "Um pedido especial de oração", cover: "assets/covers/capa-04.svg", video: "videos/missionario-04.mp4" },
-  { name: "Missionário 05", description: "Um pedido especial de oração", cover: "assets/covers/capa-05.svg", video: "videos/missionario-05.mp4" },
-  { name: "Missionário 06", description: "Um pedido especial de oração", cover: "assets/covers/capa-06.svg", video: "videos/missionario-06.mp4" },
-  { name: "Missionário 07", description: "Um pedido especial de oração", cover: "assets/covers/capa-07.svg", video: "videos/missionario-07.mp4" },
-  { name: "Missionário 08", description: "Um pedido especial de oração", cover: "assets/covers/capa-08.svg", video: "videos/missionario-08.mp4" },
-  { name: "Missionário 09", description: "Um pedido especial de oração", cover: "assets/covers/capa-09.svg", video: "videos/missionario-09.mp4" }
+  { name: "Endrik", description: "Conheça sua jornada missionária", cover: "assets/covers/endrik.svg", video: "Endrik.mp4" },
+  { name: "Guillermo Esquivel", description: "Conheça sua jornada missionária", cover: "assets/covers/guillermo-esquivel.svg", video: "Guillermo Esquivel.mp4" },
+  { name: "Victor Sotero", description: "Conheça sua jornada missionária", cover: "assets/covers/victor-sotero.svg", video: "Victor Sotero.mp4" },
+  { name: "Beatriz", description: "Conheça sua jornada missionária", cover: "assets/covers/beatriz.svg", video: "beatirz.mp4" },
+  { name: "Ellen Gregorio", description: "Missionária em Honduras", cover: "assets/covers/ellen-gregorio.svg", video: "ellen_gregorio_honduras.mp4" },
+  { name: "Franciele Medeiros", description: "Conheça sua jornada missionária", cover: "assets/covers/franciele-medeiros.svg", video: "franciele_medeiros.mp4" },
+  { name: "Iago Alonso", description: "Conheça sua jornada missionária", cover: "assets/covers/iago-alonso.svg", video: "iago_alonso.mp4" }
 ];
 
 const grid = document.querySelector("#missionary-grid");

@@ -4,13 +4,13 @@
   caminho cover abaixo. Os caminhos são relativos à raiz do site.
 */
 const missionaries = [
-  { name: "Endrik", cover: "assets/covers/endrik.svg", video: "Endrik.mp4" },
-  { name: "Guillermo Esquivel", cover: "assets/covers/guillermo-esquivel.svg", video: "Guillermo Esquivel.mp4" },
-  { name: "Victor Sotero", cover: "assets/covers/victor-sotero.svg", video: "Victor Sotero.mp4" },
-  { name: "Beatriz", cover: "assets/covers/beatriz.svg", video: "beatirz.mp4" },
-  { name: "Ellen Gregorio", cover: "assets/covers/ellen-gregorio.svg", video: "ellen_gregorio_honduras.mp4" },
-  { name: "Franciele Medeiros", cover: "assets/covers/franciele-medeiros.svg", video: "franciele_medeiros.mp4" },
-  { name: "Iago Alonso", cover: "assets/covers/iago-alonso.svg", video: "iago_alonso.mp4" }
+  { name: "Endrik", cover: "assets/covers/endrik.jpg", video: "Endrik.mp4" },
+  { name: "Guillermo Esquivel", cover: "assets/covers/guillermo-esquivel.jpg", video: "Guillermo Esquivel.mp4" },
+  { name: "Victor Sotero", cover: "assets/covers/victor-sotero.jpg", video: "Victor Sotero.mp4" },
+  { name: "Beatriz", cover: "assets/covers/beatriz.jpg", video: "beatirz.mp4" },
+  { name: "Ellen Gregorio", cover: "assets/covers/ellen-gregorio.jpg", video: "ellen_gregorio_honduras.mp4" },
+  { name: "Franciele Medeiros", cover: "assets/covers/franciele-medeiros.jpg", video: "franciele_medeiros.mp4" },
+  { name: "Iago Alonso", cover: "assets/covers/iago-alonso.jpg", video: "iago_alonso.mp4" }
 ];
 
 const grid = document.querySelector("#missionary-grid");
@@ -32,7 +32,6 @@ function renderMissionaries() {
     <button class="mission-card" type="button" data-index="${index}" aria-label="Assistir ao vídeo de ${person.name}">
       <div class="card-image">
         <img src="${person.cover}" alt="Capa do vídeo de ${person.name}" loading="${index < 3 ? "eager" : "lazy"}">
-        <video class="card-thumbnail" data-video="${escapeHTML(person.video)}" preload="none" muted playsinline aria-hidden="true"></video>
         <span class="card-overlay"></span>
         <span class="play-button">${playIcon()}</span>
       </div>
@@ -47,26 +46,6 @@ function renderMissionaries() {
     card.addEventListener("click", () => openVideo(Number(card.dataset.index)));
   });
 
-  const thumbnailObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      loadVideoCover(entry.target);
-      thumbnailObserver.unobserve(entry.target);
-    });
-  }, { rootMargin: "180px" });
-  grid.querySelectorAll(".card-thumbnail").forEach(thumbnail => thumbnailObserver.observe(thumbnail));
-}
-
-function loadVideoCover(thumbnail) {
-  thumbnail.addEventListener("loadedmetadata", () => {
-    if (thumbnail.duration && Number.isFinite(thumbnail.duration)) {
-      thumbnail.currentTime = Math.min(Math.max(thumbnail.duration * 0.12, 2), 8);
-    }
-  }, { once: true });
-  thumbnail.addEventListener("seeked", () => {
-    if (thumbnail.videoWidth) thumbnail.closest(".card-image").classList.add("has-video-cover");
-  }, { once: true });
-  thumbnail.src = thumbnail.dataset.video;
 }
 
 function escapeHTML(value) {

@@ -1,0 +1,36 @@
+name: Create video cover images
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract-covers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract one frame from each video
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/covers
+          ffmpeg -version
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "Endrik.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/endrik.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "Guillermo Esquivel.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/guillermo-esquivel.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "Victor Sotero.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/victor-sotero.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "beatirz.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/beatriz.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "ellen_gregorio_honduras.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/ellen-gregorio.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "franciele_medeiros.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/franciele-medeiros.jpg
+          ffmpeg -hide_banner -loglevel error -ss 4 -i "iago_alonso.mp4" -frames:v 1 -vf "scale=960:-2" -q:v 3 assets/covers/iago-alonso.jpg
+      - name: Save cover images to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/covers/*.jpg
+          git commit -m "Add video frame cover images"
+          git push origin main

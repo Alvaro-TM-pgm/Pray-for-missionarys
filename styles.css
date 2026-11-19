@@ -146,3 +146,30 @@ body.mode-player, body.mode-prayer { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Página do catálogo: título, instrução e capas dos vídeos. */
+.page-shell { width: min(1320px, 100%); padding-top: 58px; }
+.mission-section { padding: 0 0 56px; }
+.section-heading { display: block; text-align: center; margin: 0 auto 32px; }
+.section-heading .eyebrow { justify-content: center; }
+.section-heading h2 { margin: 12px 0 8px; font-size: clamp(28px, 3.5vw, 42px); }
+.section-aside { margin: 0; text-align: center; font-size: 13px; line-height: 1.6; }
+.missionary-grid { gap: 20px; }
+.mission-card { border-radius: 5px; }
+.card-image img { position: absolute; inset: 0; }
+.card-thumbnail { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .25s, transform .55s; }
+.card-image.has-video-cover .card-thumbnail { opacity: 1; }
+.card-overlay { z-index: 2; }
+.play-button { z-index: 3; }
+.card-info { min-height: 63px; padding: 14px 16px; }
+.card-info h3 { margin: 0; font-size: 18px; }
+.card-arrow { display: none; }
+@media (max-width: 760px) {
+  .page-shell { padding-top: 38px; }
+  .mission-section { padding-bottom: 32px; }
+  .missionary-grid { gap: 14px; }
+  .section-heading { margin-bottom: 24px; }
+  .section-aside { display: block; font-size: 12px; }
+  .card-info { min-height: 55px; padding: 12px; }
+  .card-info h3 { font-size: 16px; }
+}

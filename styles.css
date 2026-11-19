@@ -171,3 +171,15 @@ body.mode-player, body.mode-prayer { overflow: hidden; }
   .card-info { min-height: 55px; padding: 12px; }
   .card-info h3 { font-size: 16px; }
 }
+.section-heading h2 .title-highlight { position: relative; z-index: 0; color: var(--gold-light); white-space: nowrap; }
+.section-heading h2 .title-highlight::after { content: ""; position: absolute; z-index: -1; height: .34em; left: -.04em; right: -.04em; bottom: .08em; background: rgba(199,166,106,.5); transform: rotate(-1.5deg); }
+.mission-name { padding: 0 .08em; font-weight: 600; background: linear-gradient(transparent 55%, rgba(199,166,106,.48) 55%, rgba(199,166,106,.48) 94%, transparent 94%); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.video-caption { top: 22px; bottom: auto; left: 25px; z-index: 4; padding: 9px 13px; border-radius: 3px; background: rgba(8,16,16,.72); }
+.video-caption h2 { margin: 0; font-size: 20px; }
+.prayer-content { display: flex; flex-direction: column; align-items: center; gap: 26px; }
+.prayer-content h1 { margin: 0; }
+.prayer-content .button { margin: 0; }
+@media (max-width: 760px) {
+  .video-caption { top: 13px; left: 13px; bottom: auto; padding: 8px 10px; }
+  .video-caption h2 { font-size: 17px; }
+}

@@ -15,7 +15,7 @@
   <main id="lobby" class="page-shell">
     <section id="missionarios" class="mission-section" aria-labelledby="mission-heading">
       <div class="section-heading">
-        <div><p class="eyebrow"><span></span> HISTÓRIAS, NOMES E PEDIDOS</p><h2 id="mission-heading">Escolha um missionário para orar</h2></div>
+        <div><p class="eyebrow"><span></span> HISTÓRIAS, NOMES E PEDIDOS</p><h2 id="mission-heading">Escolha um missionário para <span class="title-highlight">orar</span></h2></div>
         <p class="section-aside">Assista ao vídeo e conheça<br>um pouco dessa jornada.</p>
       </div>
       <div id="missionary-grid" class="missionary-grid" aria-live="polite"></div>
@@ -32,19 +32,15 @@
     <div class="video-stage">
       <video id="missionary-video" playsinline controls preload="metadata">Seu navegador não oferece suporte à reprodução de vídeo.</video>
       <div id="video-error" class="video-error" hidden><div class="error-symbol">!</div><h2>Não foi possível carregar este vídeo.</h2><p>Confira se o arquivo MP4 continua na pasta do site.</p><button class="button button-outline" id="error-back" type="button">Voltar aos missionários</button></div>
-      <div class="video-caption"><span class="caption-kicker">MOMENTO DE ORAÇÃO</span><h2 id="video-missionary-name">Missionário</h2></div>
+      <div class="video-caption"><h2 id="video-missionary-name">Missionário</h2></div>
     </div>
     <p class="player-hint">Assista com atenção. Ao final, reserve um momento para orar.</p>
   </section>
 
   <section id="prayer-screen" class="prayer-screen" aria-hidden="true" aria-label="Momento de oração">
     <div class="prayer-content">
-      <div class="prayer-symbol" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M32 53S8 39 8 22a13 13 0 0 1 24-7 13 13 0 0 1 24 7c0 17-24 31-24 31Z" stroke="currentColor" stroke-width="1.7"/><path d="M32 19v20m-7-13 7-7 7 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <p class="eyebrow centered">AGORA É SUA VEZ</p><h1>Escolha um missionário<br><em>para orar.</em></h1>
-      <p class="prayer-message">Leve este pedido a Deus. Ore pelo missionário, pelas pessoas que ele deseja alcançar e por cada desafio compartilhado.</p>
-      <p class="prayer-verse">“A oração de um justo é poderosa e eficaz.” <span>— Tiago 5:16</span></p>
-      <button id="return-to-lobby" class="button button-gold" type="button">Voltar ao início <span aria-hidden="true">↗</span></button>
-      <p class="next-person">O espaço estará pronto para a próxima pessoa.</p>
+      <h1>Ore por este missionário</h1>
+      <button id="return-to-lobby" class="button button-gold" type="button">Voltar ao início</button>
     </div>
   </section>
 
